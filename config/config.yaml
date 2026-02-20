@@ -1,1 +1,13 @@
+# Input and output paths
+input_path: "data/loans_input.csv"
+parquet_output_path: "data/output/parquet"
+csv_output_path: "data/output/csv"
 
+# Spark configuration
+spark:
+  app_name: "Loans_ETL_Pipeline"
+  shuffle_partitions: 400
+  adaptive_query_execution: true
+
+# Columns to partition parquet output
+partition_by: ["loan_status"]
