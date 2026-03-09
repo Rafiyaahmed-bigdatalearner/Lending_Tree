@@ -1,0 +1,6 @@
+loan_id,member_id,loan_amount,funded_amount,loan_term_months,interest_rate,monthly_installment,issue_date,loan_status,loan_purpose,loan_title
+6,1006,,3000,36 months,11.50,98.20,2022-02-15,Current,credit_card,Credit card
+7,1007,4000,,24 months,10.00,185.40,2022-04-10,Fully Paid,debt_consolidation,Debt consolidation
+8,1008,3500,3500,36 months,,110.20,2022-06-01,Current,car,Car purchase
+9,1009,2000,2000,12 months,9.50,175.00,,Charged Off,medical,Medical expenses
+10,1010,5000,5000,36 months,12.00,166.10,2022-03-18,,moving,Moving expenses
