@@ -24,7 +24,6 @@ The Lending_Tree ETL pipeline ingests raw loan data, performs data cleaning and 
 ---
 
 ## Folder Structure
-
 Lending_Tree/
 ├─ bad_records/ # Invalid or quarantined loan data
 ├─ config/ # Configuration files (config.yaml)
@@ -70,23 +69,16 @@ python src/loans_etl.py \
 | L001    | M001      | 10000.00    | 10000.00      | 12.5          | Fully Paid  | credit_card        | 3               |
 | L002    | M002      | 5000.00     | 5000.00       | 9.9           | Current     | debt_consolidation | 2               |
 
-
-## ETL Flow Diagram
-
-```mermaid
-flowchart LR
-    A[Raw CSV Data] --> B[Read with PySpark]
-    B --> C[Data Cleaning & Transformation]
-    C --> D[Validate Key Columns]
-    D --> E{Row Valid?}
-    E -- Yes --> F[Add Audit Columns]
-    F --> G[Write Parquet Output (Partitioned by loan_status)]
-    F --> H[Write CSV Output]
-    E -- No --> I[Quarantine Invalid Rows in bad_records/]
+![ETL Flow](docs/ETL_flow.png.png)
 
 ## Future Improvements
-- Add **unit tests** for cleaning and transformation functions.
-- Integrate with **cloud storage** (AWS S3, GCS) for production-ready ETL.
-- Implement **CI/CD pipelines** using GitHub Actions.
-- Add **real-time processing** using Kafka or Spark Streaming.
-- Enhance logging with **dynamic log levels and alerts**.
+
+Add unit tests for cleaning and transformation functions.
+
+Integrate with cloud storage (AWS S3, GCS) for production-ready ETL.
+
+Implement CI/CD pipelines using GitHub Actions.
+
+Add real-time processing using Kafka or Spark Streaming.
+
+Enhance logging with dynamic log levels and alerts.
