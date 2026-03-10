@@ -48,8 +48,6 @@ python src/loans_etl.py \
   --parquet_output output/parquet \
   --csv_output output/csv
 
-
----
 ### Sample Output
 
 | loan_id | member_id | loan_amount | funded_amount | interest_rate | loan_status | loan_purpose       | loan_term_years |
@@ -57,21 +55,17 @@ python src/loans_etl.py \
 | L001    | M001      | 10000.00    | 10000.00      | 12.5          | Fully Paid  | credit_card        | 3               |
 | L002    | M002      | 5000.00     | 5000.00       | 9.9           | Current     | debt_consolidation | 2               |
 
-### ETL Flow Image  
 
-
-
-```markdown
-## ETL Flow Image
+### ETL Flow Diagram
 
 ![ETL Flow](docs/ETL_flow.png)
 
-## Future Improvements
-- Add **unit tests** for cleaning and transformation functions.
-- Integrate with **cloud storage** (AWS S3, GCS) for production-ready ETL.
-- Implement **CI/CD pipelines** using GitHub Actions.
-- Add **real-time processing** using Kafka or Spark Streaming.
+
+
+### Future Improvements
+
+- Add **unit tests** for cleaning and transformation functions.  
+- Integrate with **cloud storage** (AWS S3, GCS) for production-ready ETL.  
+- Implement **CI/CD pipelines** using GitHub Actions.  
+- Add **real-time processing** using Kafka or Spark Streaming.  
 - Enhance **logging** with dynamic log levels and alerts.
-
-
-and alerts.
