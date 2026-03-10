@@ -1,0 +1,6 @@
+loan_id,member_id,loan_amount,funded_amount,interest_rate,monthly_installment,issue_date,loan_status,loan_purpose,loan_term_years,ingestion_timestamp,ingested_by
+1,1001,5000.00,5000.00,10.65,162.87,2022-05-01,Fully Paid,debt_consolidation,3,2026-03-09 10:00:00,loans_etl_pipeline
+2,1002,1500.00,1500.00,13.49,71.20,2022-06-15,Current,credit_card,2,2026-03-09 10:00:00,loans_etl_pipeline
+3,1003,7000.00,7000.00,9.99,177.10,2022-03-10,Charged Off,home_improvement,4,2026-03-09 10:00:00,loans_etl_pipeline
+4,1004,2500.00,2500.00,15.00,225.50,2022-07-20,Current,other,1,2026-03-09 10:00:00,loans_etl_pipeline
+5,1005,10000.00,10000.00,8.75,205.50,2022-01-05,Fully Paid,debt_consolidation,5,2026-03-09 10:00:00,loans_etl_pipeline
