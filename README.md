@@ -76,7 +76,7 @@ python src/loans_etl.py \
 
 ## ETL Flow Diagram
 
-![ETL Flow](deletedocs/ETL_flow.png)
+![ETL Flow](docs/ETL_Flow.png.png)
 
 ---
 
