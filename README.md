@@ -1,48 +1,56 @@
-Lending_Tree ETL Pipeline
+# Lending_Tree ETL Pipeline
 
-A scalable ETL pipeline built with PySpark to process and clean loan data for analytics, reporting, and machine learning.
+A scalable ETL pipeline built with **PySpark** to process and clean loan data for analytics, reporting, and machine learning.
 
-Project Overview
+---
 
-The Lending_Tree ETL pipeline ingests raw loan data, performs data cleaning and transformation, handles invalid records, and outputs processed data in both Parquet and CSV formats.
+## Project Overview
 
-It is designed for large-scale distributed processing using Spark on YARN or a local Spark setup.
+The **Lending_Tree ETL pipeline** ingests raw loan data, performs data cleaning and transformation, handles invalid records, and outputs processed data in **both Parquet and CSV formats**.
 
-Key Goals
+It is designed for **large-scale distributed processing using Spark on YARN or a local Spark setup**.
 
-Ensure data quality and consistency
+### Key Goals
 
-Enable analytics and ML applications
+* Ensure **data quality and consistency**
+* Enable **analytics and ML applications**
+* Maintain a **clean and professional data pipeline workflow**
 
-Maintain a clean and professional data pipeline workflow
+---
 
-Tech Stack
+## Tech Stack
 
-Python 3.x
+* **Python 3.x**
+* **PySpark**
+* **YARN / Spark Cluster**
+* **CSV & Parquet formats**
+* **Logging & Error Handling**
 
-PySpark (ETL & distributed data processing)
+---
 
-YARN / Spark Cluster
+## Folder Structure
 
-CSV & Parquet formats
-
-Logging & Error Handling
-
-Folder Structure
+```
 Lending_Tree/
 │
 ├── bad_records/        # Invalid or quarantined loan data
-├── config/             # Configuration files (config.yaml)
+├── config/             # Configuration files
 ├── data/               # Raw input datasets
 ├── output/             # Processed output datasets
-├── src/                # ETL scripts (loans_etl.py)
-├── tests/              # Unit tests for ETL functions
+├── src/                # ETL scripts
+├── tests/              # Unit tests
 ├── docs/               # Documentation / diagrams
 │
 ├── .gitignore
 ├── README.md
 └── requirements.txt
-How to Run
+```
+
+---
+
+## How to Run
+
+```bash
 git clone https://github.com/Rafiyaahmed-bigdatalearner/Lending_Tree.git
 
 cd Lending_Tree
@@ -53,20 +61,29 @@ python src/loans_etl.py \
   --input data/loans_data.csv \
   --parquet_output output/parquet \
   --csv_output output/csv
-Sample Output
-loan_id	member_id	loan_amount	funded_amount	interest_rate	loan_status	loan_purpose	loan_term_years
-L001	M001	10000.00	10000.00	12.5	Fully Paid	credit_card	3
-L002	M002	5000.00	5000.00	9.9	Current	debt_consolidation	2
-ETL Flow Diagram
+```
 
-Future Improvements
+---
 
-Add unit tests for cleaning and transformation functions
+## Sample Output
 
-Integrate with cloud storage (AWS S3, GCS)
+| loan_id | member_id | loan_amount | funded_amount | interest_rate | loan_status | loan_purpose       | loan_term_years |
+| ------- | --------- | ----------- | ------------- | ------------- | ----------- | ------------------ | --------------- |
+| L001    | M001      | 10000.00    | 10000.00      | 12.5          | Fully Paid  | credit_card        | 3               |
+| L002    | M002      | 5000.00     | 5000.00       | 9.9           | Current     | debt_consolidation | 2               |
 
-Implement CI/CD pipelines using GitHub Actions
+---
 
-Add real-time processing using Kafka or Spark Streaming
+## ETL Flow Diagram
 
-Enhance logging with dynamic log levels and alerts
+![ETL Flow](docs/ETL_flow.png)
+
+---
+
+## Future Improvements
+
+* Add **unit tests**
+* Integrate with **cloud storage (AWS S3 / GCS)**
+* Implement **CI/CD using GitHub Actions**
+* Add **real-time processing with Kafka / Spark Streaming**
+* Improve **logging and monitoring**
