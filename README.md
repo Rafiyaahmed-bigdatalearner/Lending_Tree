@@ -63,13 +63,14 @@ python src/loans_etl.py \
   --input data/loans_data.csv \
   --parquet_output output/parquet \
   --csv_output output/csv
-
+### Sample Output
 | loan_id | member_id | loan_amount | funded_amount | interest_rate | loan_status | loan_purpose       | loan_term_years |
 | ------- | --------- | ----------- | ------------- | ------------- | ----------- | ------------------ | --------------- |
 | L001    | M001      | 10000.00    | 10000.00      | 12.5          | Fully Paid  | credit_card        | 3               |
 | L002    | M002      | 5000.00     | 5000.00       | 9.9           | Current     | debt_consolidation | 2               |
 
-![ETL Flow](docs/ETL_flow.png.png)
+## ETL Flow Image
+![ETL Flow](docs/ETL_flow.png)
 
 ## Future Improvements
 
